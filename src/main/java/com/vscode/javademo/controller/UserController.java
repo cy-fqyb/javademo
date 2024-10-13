@@ -34,4 +34,8 @@ public class UserController {
         return R.success(user, "查询成功");
     }
 
+    @GetMapping("/test")
+    public R<String> test() {
+        return R.success("添加成功");
+    }
 }

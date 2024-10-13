@@ -3,10 +3,14 @@ package com.vscode.javademo.entity;
 import lombok.Data;
 import java.time.LocalDate;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 import jakarta.persistence.Lob;
 
 @Data
 public class Novel {
+    @TableId(value = "movelId", type = IdType.AUTO)
     private Long novelId; // 小说ID
     private String title; // 小说标题
     private String author; // 作者
